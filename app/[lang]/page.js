@@ -1,6 +1,8 @@
-import HeroSlider from '../components/HeroSlider';
+import HeroSlider from '../../components/HeroSlider';
 import Testimonials from '@/components/Testimonials';
 import Link from 'next/link';
+import '../../public/css/style.css';
+
 
 export default function Page() {
   return (
@@ -28,13 +30,13 @@ export default function Page() {
             <div className="col-md-12 text-center text-white">
               <h6 style={{ letterSpacing: '4px', marginBottom: '20px', color: '#fff' }}>EST. 1895</h6>
               <h1 style={{ fontSize: '60px', fontWeight: '400', color: '#fff' }}>
-                Welcome to <span style={{ color: '#fff' }}>Contra</span>
+                Welcome to <span style={{ color: '#fff' }}>Contra Bar</span>
                 <span style={{ color: '#c19d68', display: 'block', fontSize: '35px', marginTop: '10px', fontStyle: 'italic' }}>
-                  Restaurant & Wine Bar
+                  Lounge bar
                 </span>
               </h1>
               <p style={{ marginTop: '20px', fontSize: '18px', color: '#fff', opacity: '0.8' }}>
-                1616 Broadway NY, New York
+                Stefana Nemanje 17, Istočno Sarajevo
               </p>
               <div className="mt-30">
                 <a href="#" className="button-1">CHECK OUR MENU <span></span></a>
@@ -66,7 +68,7 @@ export default function Page() {
                 </div>
                 <div className="text">
                   <p style={{ margin: 0, fontSize: '12px', color: '#999' }}>Reservation</p>
-                  <a href="tel:855-100-4444" style={{ fontSize: '22px', color: '#1a1a1a', textDecoration: 'none', fontWeight: 'bold' }}>855 100 4444</a>
+                  <a href="tel:855-100-4444" style={{ fontSize: '22px', color: '#1a1a1a', textDecoration: 'none', fontWeight: 'bold' }}>+387 66 739 468 <br/>  +387 66 488 838</a>
                 </div>
               </div>
             </div>

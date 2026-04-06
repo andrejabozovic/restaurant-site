@@ -41,12 +41,12 @@ export default function Footer() {
               <div className="footer-column footer-contact">
                 <h3 className="footer-title">Contact Info</h3>
                 <p className="footer-contact-text">
-                  1616 Broadway NY, New York 10001
+                  Stefana Nemanje 17, Istočno Sarajevo
                   <br />
-                  United States of America
+                  Bosnia i Herzegovina
                 </p>
                 <div className="footer-contact-info">
-                  <p className="footer-contact-phone">855 100 4444</p>
+                  <p className="footer-contact-phone">+387 66 739 468 <br /> +387 66 488 838</p>
                   <p className="footer-contact-mail">info@luxuryhotel.com</p>
                 </div>
                 <div className="footer-about-social-list">

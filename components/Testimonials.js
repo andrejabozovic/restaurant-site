@@ -1,7 +1,6 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
-import { AiFillStar } from "react-icons/ai"; 
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -26,14 +25,13 @@ export default function Testimonials() {
         <SwiperSlide key={i}>
           <div className="item" style={{ textAlign: 'left' }}>
             
-            {/* ZVJEZDICE - sada koriste AiFillStar ikonice */}
-            <div style={{ marginBottom: '15px', display: 'flex', gap: '4px' }}>
-              {[...Array(5)].map((_, idx) => (
-                <AiFillStar 
-                  key={idx} 
-                  style={{ color: '#c19d68', fontSize: '20px' }} 
-                />
-              ))}
+            {/* ZVJEZDICE - sada koriste tvoju star-rating klasu */}
+            <div className="stars" style={{ marginBottom: '15px' }}>
+              <i className="star-rating"></i>
+              <i className="star-rating"></i>
+              <i className="star-rating"></i>
+              <i className="star-rating"></i>
+              <i className="star-rating"></i>
             </div>
 
             <p style={{ 
