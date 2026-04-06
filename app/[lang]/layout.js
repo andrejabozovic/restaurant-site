@@ -19,6 +19,8 @@ export default async function RootLayout({ children, params }) {
   return (
     <html lang={lang}>
       <head>
+        <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+        <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
       </head>
       <body className="bg-blck" suppressHydrationWarning={true}>
         <Navbar lang={lang} />
