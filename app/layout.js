@@ -1,6 +1,15 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+
+import './globals.css'; // tvoj standardni css
+import '../public/css/plugins/bootstrap.min.css';
+import '../public/css/plugins/owl.carousel.min.css';
+import '../public/css/plugins/owl.theme.default.min.css';
+import '../public/css/plugins/flaticon.css';
+import '../public/css/plugins/themify-icons.css';
+import '../public/css/style.css';
 
 
 const geistSans = Geist({
@@ -28,18 +37,9 @@ export default function RootLayout({ children }) {
       <body className="bg-blck" suppressHydrationWarning={true}>
         <Navbar />
         {children}
+        <Footer />
 
-
-        <script src="/js/jquery-3.6.0.min.js"></script>
-        <script src="/js/bootstrap.min.js"></script>
-        <script src="/js/owl.carousel.min.js"></script>
-        <script src="/js/jquery.magnific-popup.js"></script>
-        <script src="/js/scrollIt.min.js"></script>
-        <script src="/js/jquery.waypoints.min.js"></script>
-        <script src="/js/YouTubePopUp.js"></script>
-        <script src="/js/imagesloaded.pkgd.min.js"></script>
-        <script src="/js/jquery.isotope.v3.0.2.js"></script>
-        <script src="/js/custom.js"></script>
+       
       </body>
     </html>
   );
