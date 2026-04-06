@@ -20,38 +20,47 @@ export default function HeroSlider() {
   return (
     <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 1, overflow: 'hidden', background: '#000' }}>
       
-   
       <style>{`
-        @keyframes kenburns {
-          0% { transform: scale(1.2); }
-          100% { transform: scale(1); }
+        @keyframes zoomToTopRight {
+          0% { 
+            transform: scale(1.3); 
+          }
+          100% { 
+            transform: scale(1); 
+          }
         }
-        .animate-kenburns {
-          animation: kenburns 5s ease-out forwards;
+        .animate-top-right {
+          transform-origin: top right; 
+          /* Koristimo linear da pokret bude konstantan bez trzanja */
+          animation: zoomToTopRight 10s linear infinite; 
         }
       `}</style>
 
-      {images.map((image, index) => (
-        <div
-          key={image}
-          className={index === currentImageIndex ? "animate-kenburns" : ""}
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            backgroundImage: `url(${image})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            opacity: index === currentImageIndex ? 1 : 0,
-            transition: 'opacity 1.5s ease-in-out',
-          }}
-        />
-      ))}
+      {images.map((image, index) => {
+        const isActive = index === currentImageIndex;
+        return (
+          <div
+            key={image}
+            className="animate-top-right"
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              backgroundImage: `url(${image})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              opacity: isActive ? 1 : 0,
+              transition: 'opacity 2.5s ease-in-out', 
+              zIndex: isActive ? 1 : 0,
+            }}
+          />
+        );
+      })}
       
-
-      <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'rgba(0,0,0,0.4)', zIndex: 2 }}></div>
+      
+      <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'rgba(0,0,0,0.4)', zIndex: 5 }}></div>
     </div>
   );
 }
