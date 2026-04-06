@@ -1,25 +1,29 @@
-FROM node:22-alpine AS deps
+FROM node:20-alpine AS base
 WORKDIR /app
-COPY package*.json ./
-RUN npm ci
+ENV PNPM_HOME="/pnpm"
+ENV PATH="$PNPM_HOME:$PATH"
+RUN corepack enable
 
-FROM node:22-alpine AS builder
-WORKDIR /app
-ENV NEXT_TELEMETRY_DISABLED=1
+FROM base AS deps
+COPY package.json ./
+RUN pnpm install --no-frozen-lockfile
+
+FROM base AS builder
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-RUN npm run build
+RUN pnpm build
 
-FROM node:22-alpine AS runner
-WORKDIR /app
+FROM deps AS prod-deps
+RUN pnpm prune --prod
+
+FROM base AS runner
 ENV NODE_ENV=production
-ENV NEXT_TELEMETRY_DISABLED=1
-ENV PORT=80
-COPY package*.json ./
-COPY --from=deps /app/node_modules ./node_modules
-RUN npm prune --omit=dev
+
+COPY package.json ./
+COPY --from=prod-deps /app/node_modules ./node_modules
 COPY --from=builder /app/.next ./.next
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/next.config.mjs ./next.config.mjs
-EXPOSE 80
-CMD ["npm", "run", "start", "--", "-H", "0.0.0.0", "-p", "80"]
+
+EXPOSE 3000
+CMD ["pnpm", "start", "--hostname", "0.0.0.0", "--port", "3000"]
