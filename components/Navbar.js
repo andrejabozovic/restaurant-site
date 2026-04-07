@@ -30,7 +30,7 @@ export default async function Navbar({lang}) {
           <ul className="navbar-nav ms-auto">
             <li className="nav-item"><Link className="nav-link" href="/"> {dictionary.navigation.home} </Link></li>
             <li className="nav-item"><Link className="nav-link" href="/about"> {dictionary.navigation.about} </Link></li>
-            <li className="nav-item"><Link className="nav-link" href="/menu"> {dictionary.navigation.menu} </Link></li>
+            <li className="nav-item"><Link className="nav-link"  href={`/${lang}/menu`}> {dictionary.navigation.menu} </Link></li>
             <li className="nav-item"><Link className="nav-link" href="/wine"> {dictionary.navigation.wine} </Link></li>
             <li className="nav-item"><Link className="nav-link" href="/contact"> {dictionary.navigation.contact} </Link></li>
 

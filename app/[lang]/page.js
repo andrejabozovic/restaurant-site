@@ -4,6 +4,7 @@ import Link from 'next/link';
 import '../../public/css/style.css';
 
 
+
 export default function Page() {
   return (
     <main>
