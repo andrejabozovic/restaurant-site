@@ -1,4 +1,5 @@
 import React from "react";
+import LastSection from "../LastSection";
 
 const Menu = ({ 
   title = "Menu Book", 
@@ -124,6 +125,9 @@ const Menu = ({
           ))}
         </div>
       </section>
+
+      {/* Last Section */}
+      <LastSection />
     </>
   );
 };
