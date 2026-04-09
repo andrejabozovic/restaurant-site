@@ -1,8 +1,15 @@
 {
-    "navigation": {
+  "navigation": {
     "home": "Početna",
     "menu": "Meni",
-    "about": "O nama",
+    "pages": {
+      "label": "Stranice",
+      "dropdown": {
+        "services": "Usluge",
+        "image_gallery": "Galerija slika",
+        "video_gallery": "Video galerija"
+      }
+    },
     "contact": "Kontakt"
   }
 }

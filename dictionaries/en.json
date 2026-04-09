@@ -1,8 +1,15 @@
 {
-    "navigation": {
+  "navigation": {
     "home": "Home",
     "menu": "Menu",
-    "about": "About Us",
+    "pages": {
+      "label": "Pages",
+      "dropdown": {
+        "services": "Services",
+        "image_gallery": "Image Gallery",
+        "video_gallery": "Video Gallery"
+      }
+    },
     "contact": "Contact"
   }
 }
