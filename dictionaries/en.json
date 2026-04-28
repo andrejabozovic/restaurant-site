@@ -11,5 +11,29 @@
       }
     },
     "contact": "Contact"
+  },
+  "photo_gallery": {
+    "title": "Photo Gallery",
+    "description1": "Our Gallery",
+    "description2": "Photo Gallery"
+  },
+  "footer": {
+    "aboutTitle": "About Us",
+    "aboutDescription": "Welcome to Contra Bar – a place where great coffee, delicious food, and a vibrant atmosphere come together. Located in the heart of East Sarajevo, Contra Bar is the perfect choice for relaxing during the day and enjoying evenings out. Our offer is carefully crafted to satisfy different tastes – from quality coffee and refreshing drinks to a variety of dishes.",
+    "language": "English",
+
+    "contactTitle": "Contact Info",
+    "address": "Stefana Nemanje 17, East Sarajevo, Bosnia and Herzegovina",
+    "phone1": "+387 66 739 468",
+    "phone2": "+387 66 488 838",
+    "email": "info@luxuryhotel.com",
+
+    "workingHoursTitle": "Working Hours",
+    "workingDays": "Monday - Friday",
+    "workingDaysHours": "08:00 - 23:00",
+    "weekend": "Saturday - Sunday",
+    "weekendHours": "09:00 - 00:00",
+
+    "copyright": "© Copyright 2026 by DuruThemes.com"
   }
 }

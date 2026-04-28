@@ -24,10 +24,14 @@ export default async function InnerPage({ params }) {
 
   const dictionary = await getDictionary(lang);
   const Component = componentsMap[path];
+  const dictionaryKeyMap = {
+    "image-gallery": "photo_gallery",
+  };
+  const dictionaryKey = dictionaryKeyMap[path] || path;
 
   return (
     <Component 
-      dict={dictionary[path] || {}} 
+      dict={dictionary[dictionaryKey] || {}} 
       lang={lang} 
     />
   );

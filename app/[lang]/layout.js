@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { getDictionary } from "@/lib/get-dictionary";
 
 import "@/public/css/plugins/bootstrap.min.css";
 import "@/public/css/plugins/owl.carousel.min.css";
@@ -15,6 +16,7 @@ const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"]
 
 export default async function RootLayout({ children, params }) {
   const { lang } = await params;
+  const dictionary = await getDictionary(lang);
 
   return (
     <html lang={lang}>
@@ -25,7 +27,7 @@ export default async function RootLayout({ children, params }) {
       <body className="bg-blck" suppressHydrationWarning={true}>
         <Navbar lang={lang} />
         {children}
-        <Footer />
+        <Footer dict={dictionary} />
       </body>
     </html>
   );

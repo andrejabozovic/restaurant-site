@@ -11,5 +11,29 @@
       }
     },
     "contact": "Kontakt"
-  }
+  },
+  "photo_gallery": {
+    "title": "Galerija slika",
+    "description1": "Naša galerija",
+    "description2": "Galerija slika"
+  },
+  "footer": {
+  "aboutTitle": "O nama",
+  "aboutDescription": "Dobrodošli u Contra Bar – mjesto gdje se spajaju dobra kafa, ukusna hrana i vrhunska atmosfera. Smješten u srcu Istočnog Sarajeva, Contra Bar je savršen izbor za opuštanje tokom dana i uživanje u večernjim izlascima. Naša ponuda pažljivo je kreirana kako bi zadovoljila različite ukuse – od kvalitetne kafe i osvježavajućih pića do raznovrsnih jela.",
+  "language": "Srpski",
+
+  "contactTitle": "Kontakt informacije",
+  "address": "Stefana Nemanje 17, Istočno Sarajevo, Bosna i Hercegovina",
+  "phone1": "+387 66 739 468",
+  "phone2": "+387 66 488 838",
+  "email": "info@luxuryhotel.com",
+
+  "workingHoursTitle": "Radno vrijeme",
+"workingDays": "Ponedjeljak - Petak",
+"workingDaysHours": "08:00 - 23:00",
+"weekend": "Subota - Nedjelja",
+"weekendHours": "09:00 - 00:00",
+
+  "copyright": "© Copyright 2026 by DuruThemes.com"
+}
 }
